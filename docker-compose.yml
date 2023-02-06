@@ -1,0 +1,12 @@
+version: '4.15'
+services:
+  react-studishop:
+    build:
+      context: ./react/studishop
+    ports:
+      - "3000:3000"
+    container_name: react-studishop
+    stdin_open: true
+    volumes:
+      - ./react/studishop/:/usr/src/app/my-app/
+      - /usr/src/app/my-app/node_modules
